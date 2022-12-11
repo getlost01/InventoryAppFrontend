@@ -4,10 +4,6 @@ import Home from './Home';
 import Navbar from "../Navbar/Navbar";
 
 const Main = () => {
-	const handleLogout = () => {
-		localStorage.removeItem("token");
-		window.location.reload();
-	};
 
 	return (
 		 <div className="App" style={{ backgroundColor: 'white', padding:'2rem',borderRadius:'5px'}}>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
+import './styles.module.css';
 
 import Header from './Header';
 import Table from './Table';

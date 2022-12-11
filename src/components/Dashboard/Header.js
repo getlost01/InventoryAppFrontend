@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import styles from "./styles.module.css";
+import React from 'react';
 import axios from 'axios';
 
 const Header = ({ setIsAdding, setIsAuthenticated }) => {
@@ -13,7 +12,7 @@ const Header = ({ setIsAdding, setIsAuthenticated }) => {
 		try {
       		const data = JSON.parse(localStorage.getItem('products_data'));
 			const url = "https://courageous-sun-hat-bee.cyclic.app/api/product/create";
-			const { data:res} = await axios.post(url, data);
+			await axios.post(url, data);
 		} catch (error) {
 			console.log(error);
 		}

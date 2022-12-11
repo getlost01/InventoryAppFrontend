@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 
 import Header from './Header';
@@ -8,7 +7,6 @@ import Add from './Add';
 import Edit from './Edit';
 
 import { productData } from '../../data';
-import styles from "./styles.module.css";
 
 const Dashboard = ({ setIsAuthenticated }) => {
   const [products, setproducts] = useState(productData);

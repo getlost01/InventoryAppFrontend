@@ -11,14 +11,13 @@ const Header = ({ setIsAdding, setIsAuthenticated }) => {
   const handleUpload = async (e) => {
 		e.preventDefault();
 		try {
-      const data = JSON.parse(localStorage.getItem('products_data'));
-			const url = "http://localhost:8080/api/product/create";
+      		const data = JSON.parse(localStorage.getItem('products_data'));
+			const url = "https://courageous-sun-hat-bee.cyclic.app/api/product/create";
 			const { data:res} = await axios.post(url, data);
 		} catch (error) {
 			console.log(error);
 		}
 	};
-
   
   
   return (

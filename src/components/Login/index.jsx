@@ -14,11 +14,11 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/auth";
+			const url = "https://courageous-sun-hat-bee.cyclic.app/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			const response = await fetch(
-				'http://localhost:8080/api/product'
+				'https://courageous-sun-hat-bee.cyclic.app/api/product'
 			);
 			const dataToStore = await response.json();
 			localStorage.setItem('products_data', JSON.stringify(dataToStore.products));

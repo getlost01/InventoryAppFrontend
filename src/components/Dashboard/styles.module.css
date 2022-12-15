@@ -991,7 +991,7 @@
   }
   
   .contain-table {
-    overflow-x: auto;
+    overflow-x: scroll;
   }
   
   @media (min-width: 600px) {

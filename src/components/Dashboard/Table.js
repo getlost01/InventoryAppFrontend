@@ -12,7 +12,7 @@ const Table = ({ products, handleEdit, handleDelete }) => {
   });
 
   return (
-    <div className="contain-table">
+    <div className="contain-table"  style={{overflowX : 'scroll',width:"100%"}}>
       <table className="striped-table">
         <thead>
           <tr>
@@ -27,7 +27,7 @@ const Table = ({ products, handleEdit, handleDelete }) => {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {products.length > 0 ? (
             products.map((product, i) => (
               <tr key={product.id}>

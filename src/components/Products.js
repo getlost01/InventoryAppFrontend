@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../store/cartSlice';
 import { fetchProducts } from '../store/productSlice';
 import { STATUSES } from '../store/productSlice';
+import Swal from 'sweetalert2';
 
 const Products = () => {
     const dispatch = useDispatch();
@@ -22,6 +23,12 @@ const Products = () => {
 
     const handleAdd = (product) => {
         dispatch(add(product));
+        Swal.fire({
+            icon: 'success',
+            title: 'Added to cart',
+            showConfirmButton: false,
+            timer: 1500,
+        });
     };
 
     if (status === STATUSES.LOADING) {

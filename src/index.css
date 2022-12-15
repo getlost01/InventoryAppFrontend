@@ -23,6 +23,11 @@ code {
     background: white;
     padding: 20px;
     border-radius: 10px;
+    margin: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     cursor: pointer;
     transition: all ease-in-out 0.3s;
 }
@@ -30,11 +35,16 @@ code {
     box-shadow: 0 2px 5px #aaa;
 }
  .productsWrapper {
-    display: grid;
-    padding: 30px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     margin: 10px;
+}
+.cartWrapper{
+    display: flex;
+    flex-direction: column;
 }
 .App .btn {
     border: none;
@@ -57,11 +67,6 @@ code {
 .App .heading {
     padding: 25px 0;
 }
-.App .cartCount {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 40px;
-}
 .App .navLink {
     text-decoration: none;
     color: white;
@@ -71,15 +76,24 @@ code {
 .App .cartCard {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
     background: #fff;
     margin-bottom: 20px;
     padding: 14px;
     border-radius: 5px;
 }
-
-
-
+.cartCard img{
+    margin-bottom: 5px;
+}
+.App .cartCard p{
+    margin: 0;
+}
+@media only screen and (max-width: 800px) {
+    .App .cartCard {
+        flex-direction: column;
+    }
+  }
 
 
 

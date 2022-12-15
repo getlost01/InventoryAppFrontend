@@ -14,17 +14,16 @@ const Navbar = () => {
             }}
         >
             <span className="logo">Wender.in</span>
-            <div>
+            <div style={{margin:"0 20px"}}>
                 <Link className="navLink" to="/products">
                     Home
                 </Link>
                 <Link className="navLink" to="/cart">
-                    Cart
+                    Cart ({items.length})
                 </Link>
                 <Link className="navLink" to="/">
                    Admin
                 </Link>
-                <span className="cartCount">Cart items: {items.length}</span>
             </div>
         </div>
     );

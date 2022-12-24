@@ -31,12 +31,12 @@ const Table = ({ products, handleEdit, handleDelete }) => {
           {products.length > 0 ? (
             products.map((product, i) => (
               <tr key={product.id}>
-                <td>{i + 1}</td>
-                <td>{product.title}</td>
-                <td>{product.createdBy}</td>
-                <td>{product.image}</td>
-                <td>{formatter.format(product.price)}</td>
-                <td>{product.createdAt} </td>
+                <td style={{ maxWidth:"10rem", whiteSpace: "nowrap",  overflow: "hidden",textOverflow: "ellipsis"}}>{i + 1}</td>
+                <td style={{ maxWidth:"10rem", whiteSpace: "nowrap",  overflow: "hidden",textOverflow: "ellipsis"}}>{product.title}</td>
+                <td style={{ maxWidth:"20rem", whiteSpace: "nowrap",  overflow: "hidden",textOverflow: "ellipsis"}}>{product.createdBy}</td>
+                <td style={{ maxWidth:"20rem", whiteSpace: "nowrap",  overflow: "hidden",textOverflow: "ellipsis"}}>{product.image}</td>
+                <td style={{ maxWidth:"20rem", whiteSpace: "nowrap",  overflow: "hidden",textOverflow: "ellipsis"}}>{formatter.format(product.price)}</td>
+                <td style={{ maxWidth:"20rem", whiteSpace: "nowrap",  overflow: "hidden",textOverflow: "ellipsis"}}>{product.createdAt} </td>
                 <td className="text-right">
                   <button
                     onClick={() => handleEdit(product.id)}

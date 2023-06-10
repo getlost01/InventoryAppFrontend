@@ -14,11 +14,11 @@ const Products = () => {
     };
 
     if (status === STATUSES.LOADING) {
-        return <h2>Loading....</h2>;
+         return <h4 style={{textAlign: 'center', padding:'2rem'}}>Loading....</h4>;
     }
 
     if (status === STATUSES.ERROR) {
-        return <h2>Something went wrong!</h2>;
+         return <h4 style={{textAlign: 'center', padding:'2rem'}}>Something went wrong!</h4>;
     }
     return (
         <div className="productsWrapper">

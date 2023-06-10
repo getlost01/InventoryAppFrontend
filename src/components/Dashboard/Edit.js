@@ -85,7 +85,7 @@ const Edit = ({ products, selectedproduct, setproducts, setIsEditing }) => {
           type="number"
           name="price"
           value={price}
-          onChange={e => setprice(e.target.value)}
+          onChange={e => setprice(Math.abs(e.target.value))}
         />
         <label htmlFor="createdAt">Update At</label>
         <input

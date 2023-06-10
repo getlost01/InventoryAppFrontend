@@ -9,16 +9,9 @@ const Products = () => {
     const dispatch = useDispatch();
     const { data: products, status } = useSelector((state) => state.product);
     // const [products, setProducts] = useState([]);
-    console.log(products);
+    // console.log(products);
     useEffect(() => {
         dispatch(fetchProducts());
-        // const fetchProducts = async () => {
-        //     const res = await fetch('https://fakestoreapi.com/products');
-        //     const data = await res.json();
-        //     console.log(data);
-        //     setProducts(data);
-        // };
-        // fetchProducts();
     }, [dispatch]);
 
     const handleAdd = (product) => {
@@ -32,11 +25,11 @@ const Products = () => {
     };
 
     if (status === STATUSES.LOADING) {
-        return <h2>Loading....</h2>;
+        return <h4 style={{textAlign: 'center', padding:'2rem'}}>Loading....</h4>;
     }
 
     if (status === STATUSES.ERROR) {
-        return <h2>Something went wrong!</h2>;
+        return <h4 style={{textAlign: 'center', padding:'2rem'}}>Something went wrong!</h4>;
     }
     return (
         <div className="productsWrapper">

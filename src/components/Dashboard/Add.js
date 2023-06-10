@@ -78,7 +78,7 @@ const Add = ({ products, setproducts, setIsAdding }) => {
           type="number"
           name="price"
           value={price}
-          onChange={e => setprice(e.target.value)}
+          onChange={e => setprice(Math.abs(e.target.value))}
         />
         <label htmlFor="createdAt">Created At</label>
         <input

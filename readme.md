@@ -57,7 +57,7 @@ start the local server by
 npm start
 ```
 
-After running the development server the site should be running on https://localhost:3003
+After running the development server the site should be running on https://localhost:3000
 
 -----
 

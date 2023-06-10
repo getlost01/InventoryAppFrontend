@@ -14,7 +14,7 @@ const Header = ({ setIsAdding, setIsAuthenticated }) => {
 		e.preventDefault();
 		try {
       		const data = JSON.parse(localStorage.getItem('products_data'));
-			const url = "http://localhost:8080/api/product/create";
+			const url = "https://inventoryappbackend.onrender.com/api/product/create";
 			Swal.fire({
 				icon: 'success',
 				title: 'Updated!',

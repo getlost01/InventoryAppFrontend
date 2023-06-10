@@ -13,7 +13,7 @@ const Navbar = () => {
                 justifyContent: 'space-between',
             }}
         >
-            <span className="logo">Wender.in</span>
+            <span className="logo">Wendor.in</span>
             <div style={{margin:"0 20px"}}>
                 <Link className="navLink" to="/products">
                     Home
